@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         MyLinkedList<Integer> list = new MyLinkedList<>();
 
         list.add(1);
@@ -9,7 +12,6 @@ public class Main {
         list.add(5);
 
         print(list);
-        System.out.println();
         System.out.println("--------------------");
 
         MyArrayList<Integer> list2 = new MyArrayList<>();
@@ -20,6 +22,7 @@ public class Main {
         list2.add(5);
 
         print(list2);
+
     }
 
     public static void print(MyList<Integer> list) {
@@ -27,5 +30,7 @@ public class Main {
         while (i < list.size()) {
             System.out.print(list.get(i++) + " ");
         }
+
+        System.out.println();
     }
 }
