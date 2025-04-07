@@ -1,4 +1,4 @@
-public class MyArrayList<T extends Iterable<T>> implements MyList<T> {
+public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
     private Object[] elements;
     private int length;
 
@@ -63,6 +63,7 @@ public class MyArrayList<T extends Iterable<T>> implements MyList<T> {
         elements = newElements;
     }
 
+    @Override
     public T get(int index) {
         checkIndex(index);
         return (T) elements[index]; //downcasting
