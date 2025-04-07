@@ -1,8 +1,9 @@
 public class MyNode<T> {
+    T data;
     MyNode<T> next;
-    T element;
 
-    public MyNode(T element) {
-        this.element = element;
+    public MyNode(T data){
+        this.data = data;
+        this.next = null;
     }
 }

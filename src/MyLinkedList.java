@@ -1,6 +1,7 @@
 public class MyLinkedList<T> implements MyList<T>{
     private MyNode<T> node;
     private int length;
+
     public MyLinkedList(){
         node = null;
         length = 0;
@@ -9,17 +10,36 @@ public class MyLinkedList<T> implements MyList<T>{
     @Override
     public void add(T element) {
         MyNode<T> newNode = new MyNode<>(element);
-        if(node==null){
+        if (node == null) {
             node = newNode;
-        }
-        else{
+        } else {
             MyNode<T> current = node;
             while (current.next != null){
                 current = current.next;
             }
             current.next = newNode;
-            length++;
         }
+        length++;
+    }
+
+    @Override
+    public void set(int index, T item) {
+
+    }
+
+    @Override
+    public void add(int index, T item) {
+
+    }
+
+    @Override
+    public void addFirst(T element) {
+
+    }
+
+    @Override
+    public void addLast(T element) {
+
     }
 
     @Override
@@ -28,15 +48,65 @@ public class MyLinkedList<T> implements MyList<T>{
     }
 
     @Override
+    public void removeFirst() {
+
+    }
+
+    @Override
+    public void removeLast() {
+
+    }
+
+    @Override
     public T get(int index) {
-        if(index<0 || index>=size()){
+        if(index<0 || index>size()){
             throw new IndexOutOfBoundsException();
         }
         MyNode<T> current = node;
         for(int i=0;i<index;i++){
             current = current.next;
         }
-        return current.element;
+        return current.data;
+    }
+
+    @Override
+    public T getFirst() {
+        return null;
+    }
+
+    @Override
+    public T getLast() {
+        return null;
+    }
+
+    @Override
+    public void sort() {
+
+    }
+
+    @Override
+    public int indexOf(Object object) {
+        return 0;
+    }
+
+    @Override
+    public int lastIndexOf(Object object) {
+        return 0;
+    }
+
+    @Override
+    public boolean exists(Object object) {
+        return false;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return new Object[0];
+    }
+
+    @Override
+    public void clear() {
+
     }
 
     @Override
