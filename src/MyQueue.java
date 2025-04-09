@@ -1,6 +1,6 @@
 import java.util.NoSuchElementException;
 
-public class MyQueue<T>{
+public class MyQueue<T> {
     private MyNode<T> front;
     private MyNode<T> rear;
     private int length;
