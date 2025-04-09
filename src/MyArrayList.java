@@ -97,7 +97,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
     @Override
     public int indexOf(Object object) {
         for (int i = 0; i < length; i++) {
-            if (elements[i] == object) {
+            if (elements[i].equals(object)) {
                 return i;
             }
         }
@@ -109,7 +109,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
     public int lastIndexOf(Object object) {
         int lastIndex = -1;
         for (int i = 0; i < length; i++) {
-            if (elements[i] == object) {
+            if (elements[i].equals(object)) {
                 lastIndex = i;
             }
 
@@ -164,6 +164,10 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
 
     @Override
     public void removeLast() {
+        if (length == 0) {
+            throw new ArrayIndexOutOfBoundsException("List is empty");
+        }
+
         elements[length - 1] = null;
         length--;
     }

@@ -105,7 +105,7 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public T get(int index) {
-        if (index < 0 || index > length){
+        if (index < 0 || index >= length){
             throw new IndexOutOfBoundsException();
         }
         MyNode<T> current = node;
@@ -136,7 +136,8 @@ public class MyLinkedList<T> implements MyList<T>{
 
     @Override
     public void sort() {
-
+        // по чесноку чета в душе не чаю я чета пытался пытался да не допытался
+        // а гпт юзать ну незнаю яж честный
     }
 
     @Override
